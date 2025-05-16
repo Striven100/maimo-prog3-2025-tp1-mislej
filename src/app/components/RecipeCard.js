@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Name from "@/app/components/Name";
 
-const RecipeCard = ({ image, name, id }) => {
+const RecipeCard = ({ image, name, id}) => {
   return (
     <div className='recipe_card'>
       <Image
