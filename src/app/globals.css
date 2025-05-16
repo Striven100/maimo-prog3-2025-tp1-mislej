@@ -1,20 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: #f0efeb;
+  --color-foreground: #264653;
+  --color-primary: #e76f51;
+  --color-secondary: #2a9d8f;
+  --color-accent: #e9c46a;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -22,45 +19,89 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
+  background-color: var(--color-primary);
   color: white;
-  height: 50px;
-  padding: 0 50px;
+  padding: 0 2rem;
+  height: 60px;
 }
 
-.nav_container ul {
+.nav_container .logo {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  gap:20px;
+}
+
+.nav_container .logo img {
+  height: 40px;
+}
+
+.nav_container nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-gif {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.navbar-gif img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .footer_container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
-  height: 50px;
-  background-color: black;
+  padding: 0 2rem;
+  height: 60px;
+  background-color: var(--color-secondary);
   color: white;
 }
 
 .home_container {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 120px); /* navbar + footer */
+  overflow-y: auto;
+  padding: 2rem;
 }
 
 .recipes_grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .recipe_card {
-  grid-column: span 4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 1rem;
+}
+
+.recipe_name h3 {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.ver_mas {
+  display: inline-block;
+  background-color: var(--color-secondary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.ver_mas:hover {
+  background-color: var(--color-accent);
 }
