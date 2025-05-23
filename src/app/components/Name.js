@@ -1,8 +1,10 @@
+import Link from "next/link";
+
 const Name = ({ name, id }) => {
   return (
     <div className="recipe_name">
       <h3>{name}</h3>
-      <a href={`?id=${id}`} className="ver_mas">Ver más</a>
+      <Link href={`recipe/${id}`} className="ver_mas">Ver más</Link>
     </div>
   );
 };
