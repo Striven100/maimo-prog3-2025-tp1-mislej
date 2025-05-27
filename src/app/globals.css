@@ -105,3 +105,39 @@ body {
 .ver_mas:hover {
   background-color: var(--color-accent);
 }
+
+.recipe_container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #eee;
+}
+
+.recipe_container img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.recipe_container h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.recipe_container p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.recipe_container ul, .recipe_container ol {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.recipe_container ul li, .recipe_container ol li {
+  margin-bottom: 5px;
+}
