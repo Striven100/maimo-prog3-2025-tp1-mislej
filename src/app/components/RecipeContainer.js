@@ -40,7 +40,7 @@ const RecipeContainer = ({id}) => {
       <ul>{data.ingredients.map(ing => `${ing}`).join('')}</ul>
       <p><strong>Instrucciones:</strong></p>
       <ol>{data.instructions.map(inst => `${inst}`).join('')}</ol>
-      <Link href='http://localhost:3000/'>Volver</Link>
+      <Link classname="volver" href='/'>Volver</Link>
       </div>
       }
 
